@@ -23,7 +23,7 @@ function getRequestObject() {
 // Makes an Ajax GET request to 'requestUrl'
 ajaxUtils.sendGetRequest = 
   function(requestUrl, responseHandler, isJsonResponse) {
-    var request = getRequestObject();
+    var request = getRequestObject(); 
     request.onreadystatechange = 
       function() { 
         handleResponse(request, 
@@ -42,7 +42,7 @@ function handleResponse(request,
                         responseHandler,
                         isJsonResponse) {
   if ((request.readyState == 4) &&
-     (request.status == 200)) {
+     (request.status == 200)) { 
 
     // Default to isJsonResponse = true
     if (isJsonResponse == undefined) {
